@@ -19,7 +19,6 @@ searchForm.addEventListener('submit', function(event) {
     })
 
 
-    // LEAVE THIS ALONE
     function renderMovies (movies) {
         const movieHtmlArray = movies.map(function(currentMovie){
             return `<div class="movie col-4">
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 
     // localStorage.setItem("watchlist", null)
     document.addEventListener('click', function(event) {
-        console.log(event.target)
         if (event.target.classList.contains('add-button')) {
             let movieID = event.target.dataset.imdbid
             saveToWatchList(movieID)
@@ -72,8 +70,5 @@ let watchlist = JSON.parse(watchlistJSON);
     watchlistJSON = JSON.stringify(watchlist);
     localStorage.setItem('watchlist', watchlistJSON);
 
-    console.log(watchlist)
-
-    console.log(movie)
     
 }
